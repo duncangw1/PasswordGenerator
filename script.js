@@ -21,7 +21,8 @@ function generatePassword() {
     )
   );
   console.log("users initial choice: " + passwordLength);
-  // While loop confirming the user input is between 8 and 128 characters. If their input is not in that range they have to keep trying until their input is between 8 and 128
+  // While loop confirming the user input is between 8 and 128 characters
+  // If their input is not in the specified range they have to keep trying until their input is valid
   while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     if (passwordLength < 8) {
       passwordLength = parseInt(
@@ -46,7 +47,7 @@ function generatePassword() {
       console.log("user chose nothing. New choice: " + passwordLength);
     }
   }
-  // Variables for ther user to set character types
+  // Variables for the user to set character types
   var lowercase = confirm("Do you want lowercase letters in the password?");
   console.log(lowercase);
   var uppercase = confirm("Do you want uppercase letters in the password?");
