@@ -18,9 +18,19 @@ var lowercase;
 var uppercase;
 var numeric;
 var special;
+
+// Creating variables for character types
+var lowercaseOptions = "abcdefghijklmnopqrstuvwxyz";
+var uppercaseOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numericOptions = "0123456789";
+var specialOptions = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
+console.log(lowercaseOptions[7]);
+console.log(uppercaseOptions[7]);
+console.log(numericOptions[7]);
+console.log(specialOptions[8]);
 // Generate password function
 function generatePassword() {
-  // Variable for the user to set password length
+  // Prompt for the user to set password length
   var passwordLength = parseInt(
     prompt(
       "How long do you want the password to be? Choose between 8-128 characters."
@@ -53,7 +63,7 @@ function generatePassword() {
       console.log("user chose nothing. New choice: " + passwordLength);
     }
   }
-  // Variables for the user to set character types
+  // Confirms for the user to set character types
   var lowercase = confirm("Do you want lowercase letters in the password?");
   console.log("lowercase: " + lowercase);
   var uppercase = confirm("Do you want uppercase letters in the password?");
