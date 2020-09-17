@@ -38,6 +38,7 @@ function generatePassword() {
     )
   );
   console.log("users initial choice: " + passwordLength);
+
   // While loop confirming the user input is between 8 and 128 characters
   // If their input is not in the specified range they have to keep trying until their input is valid
   while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
@@ -92,4 +93,21 @@ function generatePassword() {
     var special = confirm("Do you want special characters in the password?");
     console.log("special: " + special);
   }
+
+  // Array that fills based on user's chosen character settings
+  var passwordSettings = [];
+
+  if (lowercase === true) {
+    passwordSettings = passwordSettings.concat(lowercaseOptions);
+  }
+  if (uppercase === true) {
+    passwordSettings = passwordSettings.concat(uppercaseOptions);
+  }
+  if (numeric === true) {
+    passwordSettings = passwordSettings.concat(numericOptions);
+  }
+  if (special === true) {
+    passwordSettings = passwordSettings.concat(specialOptions);
+  }
+  console.log(passwordSettings);
 }
