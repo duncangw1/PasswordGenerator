@@ -14,23 +14,21 @@ generateBtn.addEventListener("click", writePassword);
 
 // Generate password function
 function generatePassword() {
-  while (passwordLength !== null) {
-    var passwordLength = prompt(
+  var passwordLength = parseInt(
+    prompt(
       "How long do you want the password to be? Choose between 8 and 128 characters."
+    )
+  );
+  console.log(passwordLength);
+  if (passwordLength >= 8 && passwordLength <= 128) {
+    alert(
+      "You have chosen a password length of " + passwordLength + " characters."
     );
-    console.log(passwordLength);
-    if (passwordLength >= 8 && passwordLength <= 128) {
-      alert(
-        "You have chosen a password length of " +
-          passwordLength +
-          " characters."
-      );
-      console.log("valid password length");
-    } else {
-      alert(
-        "Input invalid. You must choose a password length between 8 and 128 characters."
-      );
-      console.log("NOT a valid password length");
-    }
+    console.log("valid password length");
+  } else {
+    alert(
+      "Input invalid. You must choose a password length between 8 and 128 characters."
+    );
+    console.log("NOT a valid password length");
   }
 }
