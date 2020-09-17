@@ -12,12 +12,18 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Establishing Variables to be defined by user
+var passwordLength = parseInt("");
+var lowercase;
+var uppercase;
+var numeric;
+var special;
 // Generate password function
 function generatePassword() {
   // Variable for the user to set password length
   var passwordLength = parseInt(
     prompt(
-      "How long do you want the password to be? Choose between 8 and 128 characters."
+      "How long do you want the password to be? Choose between 8-128 characters."
     )
   );
   console.log("users initial choice: " + passwordLength);
@@ -49,11 +55,11 @@ function generatePassword() {
   }
   // Variables for the user to set character types
   var lowercase = confirm("Do you want lowercase letters in the password?");
-  console.log(lowercase);
+  console.log("lowercase: " + lowercase);
   var uppercase = confirm("Do you want uppercase letters in the password?");
-  console.log(uppercase);
+  console.log("uppercase: " + uppercase);
   var numeric = confirm("Do you want numeric characters in the password?");
-  console.log(numeric);
+  console.log("numeric: " + numeric);
   var special = confirm("Do you want special characters in the password?");
-  console.log(special);
+  console.log("special: " + special);
 }
