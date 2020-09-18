@@ -53,7 +53,7 @@ function generatePassword() {
   // Confirms for the user to set character types
   var lowercase = confirm("Do you want lowercase letters in the password?");
   var uppercase = confirm("Do you want uppercase letters in the password?");
-  var numeric = confirm("Do you want numeric characters in the password?");
+  var numeric = confirm("Do you want numbers in the password?");
   var special = confirm("Do you want special characters in the password?");
 
   // While loop ensuring the user picks at least one character type
@@ -66,7 +66,7 @@ function generatePassword() {
     alert("You must choose at least one character type!");
     var lowercase = confirm("Do you want lowercase letters in the password?");
     var uppercase = confirm("Do you want uppercase letters in the password?");
-    var numeric = confirm("Do you want numeric characters in the password?");
+    var numeric = confirm("Do you want numbers in the password?");
     var special = confirm("Do you want special characters in the password?");
   }
 
