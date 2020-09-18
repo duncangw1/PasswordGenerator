@@ -24,10 +24,6 @@ var lowercaseOptions = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numericOptions = "0123456789";
 var specialOptions = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
-console.log(lowercaseOptions[7]);
-console.log(uppercaseOptions[7]);
-console.log(numericOptions[7]);
-console.log(specialOptions[8]);
 
 // Generate password function
 function generatePassword() {
@@ -37,7 +33,6 @@ function generatePassword() {
       "How long do you want the password to be? Choose between 8-128 characters."
     )
   );
-  console.log("users initial choice: " + passwordLength);
 
   // While loop confirming the user input is between 8 and 128 characters
   // If their input is not in the specified range they have to keep trying until their input is valid
@@ -48,33 +43,26 @@ function generatePassword() {
           "You chose less than 8 characters. Please choose a length between 8-128 characters."
         )
       );
-      console.log("user chose less than 8. New choice: " + passwordLength);
     } else if (passwordLength > 128) {
       passwordLength = parseInt(
         prompt(
           "You chose more than 128 characters. Please choose a length between 8-128 characters."
         )
       );
-      console.log("user chose more than 8. New choice: " + passwordLength);
     } else {
       passwordLength = parseInt(
         prompt(
           "Password length is required to continue. Please choose a length between 8-128 characters."
         )
       );
-      console.log("user chose nothing. New choice: " + passwordLength);
     }
   }
 
   // Confirms for the user to set character types
   var lowercase = confirm("Do you want lowercase letters in the password?");
-  console.log("lowercase: " + lowercase);
   var uppercase = confirm("Do you want uppercase letters in the password?");
-  console.log("uppercase: " + uppercase);
   var numeric = confirm("Do you want numeric characters in the password?");
-  console.log("numeric: " + numeric);
   var special = confirm("Do you want special characters in the password?");
-  console.log("special: " + special);
 
   // While loop ensuring the user picks at least one character type
   while (
@@ -85,13 +73,9 @@ function generatePassword() {
   ) {
     alert("You must choose at least one character type!");
     var lowercase = confirm("Do you want lowercase letters in the password?");
-    console.log("lowercase: " + lowercase);
     var uppercase = confirm("Do you want uppercase letters in the password?");
-    console.log("uppercase: " + uppercase);
     var numeric = confirm("Do you want numeric characters in the password?");
-    console.log("numeric: " + numeric);
     var special = confirm("Do you want special characters in the password?");
-    console.log("special: " + special);
   }
 
   // Array that fills based on user's chosen character types
@@ -109,7 +93,6 @@ function generatePassword() {
   if (special === true) {
     passwordSettings = passwordSettings.concat(specialOptions.split(""));
   }
-  console.log(passwordSettings);
 
   // Variable that will hold the randomly generated password
   var passwordRandom = "";
@@ -119,7 +102,6 @@ function generatePassword() {
     passwordRandom =
       passwordRandom +
       passwordSettings[Math.floor(Math.random() * passwordSettings.length)];
-    console.log(passwordRandom);
   }
 
   // Returns entire randomly generated password for the writePassword function to display to the user
