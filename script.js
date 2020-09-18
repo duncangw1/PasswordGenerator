@@ -73,16 +73,16 @@ function generatePassword() {
   // Array that fills based on user's chosen character types
   var passwordSettings = [];
 
-  if (lowercase === true) {
+  if (lowercase) {
     passwordSettings = passwordSettings.concat(lowercaseOptions.split(""));
   }
-  if (uppercase === true) {
+  if (uppercase) {
     passwordSettings = passwordSettings.concat(uppercaseOptions.split(""));
   }
-  if (numeric === true) {
+  if (numeric) {
     passwordSettings = passwordSettings.concat(numericOptions.split(""));
   }
-  if (special === true) {
+  if (special) {
     passwordSettings = passwordSettings.concat(specialOptions.split(""));
   }
 
