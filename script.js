@@ -94,20 +94,34 @@ function generatePassword() {
     console.log("special: " + special);
   }
 
-  // Array that fills based on user's chosen character settings
+  // Array that fills based on user's chosen character types
   var passwordSettings = [];
 
   if (lowercase === true) {
-    passwordSettings = passwordSettings.concat(lowercaseOptions);
+    passwordSettings = passwordSettings.concat(lowercaseOptions.split(""));
   }
   if (uppercase === true) {
-    passwordSettings = passwordSettings.concat(uppercaseOptions);
+    passwordSettings = passwordSettings.concat(uppercaseOptions.split(""));
   }
   if (numeric === true) {
-    passwordSettings = passwordSettings.concat(numericOptions);
+    passwordSettings = passwordSettings.concat(numericOptions.split(""));
   }
   if (special === true) {
-    passwordSettings = passwordSettings.concat(specialOptions);
+    passwordSettings = passwordSettings.concat(specialOptions.split(""));
   }
   console.log(passwordSettings);
+
+  // Variable that will hold the randomly generated password
+  var passwordRandom = "";
+
+  // For loop that builds random password based on the user created passwordSettings array
+  for (var i = 0; i < passwordLength; i++) {
+    passwordRandom =
+      passwordRandom +
+      passwordSettings[Math.floor(Math.random() * passwordSettings.length)];
+    console.log(passwordRandom);
+  }
+
+  // Returns entire randomly generated password for the writePassword function to display to the user
+  return passwordRandom;
 }
