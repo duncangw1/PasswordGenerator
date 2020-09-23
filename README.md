@@ -9,18 +9,22 @@ This README has been created to accompany the completed JavaScript Password Gene
 ## Screenshots
 
 Landing Page
+<img src="images/LandingPage.png" alt="Landing Page screenshot">
 
 ---
 
 Choosing password length
+<img src="images/PasswordLength.png" alt="Password Length screenshot">
 
 ---
 
 Choosing the different character types (only the lowercase option is shown below)
+<img src="images/LowercaseOption.png" alt="Lowercase Option screenshot">
 
 ---
 
 Receiving the randomly generated password
+<img src="images/RandomlyGeneratedPassword.png" alt="Randomly Generated Password screenshot">
 
 ---
 
