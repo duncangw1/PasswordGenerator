@@ -6,6 +6,10 @@ This README has been created to accompany the completed JavaScript Password Gene
 
 [Password Generator](https://duncangw1.github.io/PasswordGenerator/)
 
+## Technologies Used
+
+- HTML, CSS, JavaScript
+
 ## Screenshots
 
 Landing Page
